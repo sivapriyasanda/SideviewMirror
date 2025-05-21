@@ -9,7 +9,6 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 enable_testing()
-
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -17,15 +16,15 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-set(Headers 
+
+
+set(Headers
     Example.hpp
 )
-set(Sources 
-    Example.cpp 
+set(Sources
+    Example.cpp
 )
 
 add_library(${This} STATIC ${Sources} ${Headers})
 
 add_subdirectory(test)
-
-
